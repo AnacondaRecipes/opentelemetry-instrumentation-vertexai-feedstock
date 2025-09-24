@@ -8,10 +8,6 @@ package:
 source:
   - url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_')}}-{{ version }}.tar.gz
     sha256: 6d6f3a45e6dd9893791584e6daba07eaf7fe2b43af01389fa0c62d92f8ae7006
-  - url: https://github.com/traceloop/openllmetry/archive/refs/tags/{{ version }}.tar.gz
-    sha256: 658e9ee9544ff1f6676e96bca947d9329c273620822de9a7cc5638165c59a13e
-    folder: gh_src
-  
 
 build:
   number: 0
