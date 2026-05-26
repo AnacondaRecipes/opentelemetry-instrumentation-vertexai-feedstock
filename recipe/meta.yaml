@@ -1,5 +1,5 @@
 {% set name = "opentelemetry-instrumentation-vertexai" %}
-{% set version = "0.49.6" %}
+{% set version = "0.57.0" %}
 
 package:
   name: {{ name|lower }}
@@ -12,19 +12,19 @@ source:
 build:
   number: 0
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  skip: true  # [py<39]
+  skip: true  # [py<310]
 
 requirements:
   host:
     - pip
     - python
-    - poetry-core
+    - hatchling
   run:
     - python
     - opentelemetry-api >=1.38.0,<2.0.0
     - opentelemetry-instrumentation >=0.59b0
     - opentelemetry-semantic-conventions >=0.59b0
-    - opentelemetry-semantic-conventions-ai >=0.4.13,<0.5.0
+    - opentelemetry-semantic-conventions-ai >=0.5.1,<0.6.0
   run_constrained:
     - google-cloud-aiplatform >=1.54.0,<2
 
